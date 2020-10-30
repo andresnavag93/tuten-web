@@ -4,7 +4,7 @@
 
 ### Url address
 
-- Link Url: [https://andresnavag93.github.io/tuten-web/](https://andresnavag93.github.io/tuten-web/)
+- Link Url: [https://tuten-web.surge.sh/tuten-web/](https://tuten-web.surge.sh/tuten-web/)
 
 ### Technologies / Tools
 
@@ -14,7 +14,6 @@
 - Redux
 - Eslint
 - Reach Router
-- React Window
 - Styled Components
 
 ### System requirements
