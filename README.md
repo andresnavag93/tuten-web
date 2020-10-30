@@ -1,10 +1,10 @@
-# Marvel Web App
+# Tuten Web App
 
-- Responsive web app developed with React.Js connected to Marvel Public API
+- Responsive web app developed with React.Js connected to Tuten Test Api
 
 ### Url address
 
-- Link Url: [https://the-marvel-world.herokuapp.com/](https://the-marvel-world.herokuapp.com/)
+- Link Url: [https://andresnavag93.github.io/tuten-web/](https://andresnavag93.github.io/tuten-web/)
 
 ### Technologies / Tools
 
@@ -14,11 +14,6 @@
 - Redux
 - Eslint
 - Reach Router
-- Express
-- React Content Loader
-- React Hook Form
-- React Paginate
-- React Tabs
 - React Window
 - Styled Components
 
@@ -26,20 +21,10 @@
 
 - node ^v12.18.3
 - npm ^6.14.6
-- docker ^19.03.13
 
 ### Run the project locally
 
 - `npm run install`
 - `npm run dev`
-
-### Make production release
-
-- `npm run start:build`
-
-### Run with Docker
-
-- `docker build -t marvel_web_app .`
-- `docker run --rm -p 8081:8081 -v ${PWD}:/usr/src marvel_web_app`
 
 ##### Developed by: Andres Navarro

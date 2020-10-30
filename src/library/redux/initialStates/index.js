@@ -1,3 +1,4 @@
 export const initialState = {
-  token: "",
+  token: null,
+  dataTable: [],
 };

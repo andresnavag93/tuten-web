@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setDeleteToken } from "../../redux/actions/index";
 import {
   LogoSmall,
   HeaderTag,
@@ -12,7 +14,9 @@ import {
 } from "./HeaderStyles";
 import { Images } from "../../../resources/Images";
 export const Header = ({ children }) => {
+  const { token, dataTable } = useSelector((state) => state.reducer);
   const [active, setActive] = useState(false);
+  const dispatch = useDispatch();
 
   const handleMenu = () => {
     setActive(!active);
@@ -26,27 +30,30 @@ export const Header = ({ children }) => {
     setActive(false);
   };
 
+  const deleteToken = () => {
+    dispatch(setDeleteToken());
+    setActive(false);
+  };
+
   return (
     <>
-      <LogoSmall
-        onClick={handleMenu}
-        src={Images.marvelLogoIcon}
-        alt="Logo de youtube"
-      />
+      <LogoSmall onClick={handleMenu} src={Images.logo} alt="Tuten Labs Logo" />
       <HeaderTag>
         <Container>
           <Figure>
             <Link to="/">
-              <Logo src={Images.marvelLogo} alt="Marvel Logo" />
+              <Logo src={Images.logo} alt="Tuten Labs Logo" />
             </Link>
           </Figure>
           <Nav active={active}>
             <Ol>
-              <Li>
-                <Link to="/" onClick={handleCloseMenu}>
-                  Home
-                </Link>
-              </Li>
+              {token && (
+                <Li>
+                  <Link to="/login" onClick={deleteToken}>
+                    Logout
+                  </Link>
+                </Li>
+              )}
             </Ol>
           </Nav>
         </Container>

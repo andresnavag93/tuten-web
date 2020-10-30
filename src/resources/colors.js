@@ -6,4 +6,5 @@ export const Colors = {
   red: "#D12D21",
   black: "#202020",
   shadow: "rgba(0, 0, 0, 0.4)",
+  blue: "#0635BD",
 };

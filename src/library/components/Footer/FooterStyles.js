@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Colors } from "../../../resources/Colors";
 
 export const FooterTag = styled.footer`
-  background-color: ${Colors.black};
+  background-color: ${Colors.blue};
   height: 100px;
   display: flex;
   justify-content: center;

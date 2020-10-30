@@ -29,7 +29,7 @@ body {
   overscroll-behavior: none;
   width: 100%;
   font-size: 1.6rem;
-  background-color: ${Colors.black};
+  background-color: ${Colors.blue};
   color: ${Colors.white}
 }
 

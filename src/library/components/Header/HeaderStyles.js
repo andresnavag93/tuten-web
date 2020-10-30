@@ -4,20 +4,21 @@ import { Colors } from "../../../resources/Colors";
 import { Link as LinkRouter } from "@reach/router";
 
 export const LogoSmall = styled.img`
-  z-index: 20;
+  background-color: white;
+  z-index: 21;
   display: none;
   position: fixed;
-  height: 50px;
-  width: 50px;
+  width: 100px;
   align-items: center;
-  margin-left: 2rem;
-  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-top: 2.5rem;
   @media ${Breakpoints.tablet} {
     display: block;
   }
 `;
 
 export const HeaderTag = styled.header`
+  background-color: white;
   display: flex;
   height: 70px;
   align-items: center;
@@ -49,13 +50,14 @@ export const Figure = styled.figure`
 
 export const Logo = styled.img`
   width: 100px;
+  background-color: white;
 `;
 
 export const Nav = styled.nav`
   @media ${Breakpoints.tablet} {
     position: fixed;
-    background: ${Colors.black};
-    z-index: 3;
+    background: ${Colors.white};
+    z-index: 20;
     top: 0;
     left: -100vw;
     width: 100vw;
@@ -82,13 +84,14 @@ export const Ol = styled.ol`
 `;
 
 export const Li = styled.li`
+  color: ${Colors.blue};
   @media ${Breakpoints.tablet} {
     height: 50px;
   }
 `;
 
 export const Link = styled(LinkRouter)`
-  color: ${Colors.white};
+  color: ${Colors.blue};
   text-decoration: none;
   padding: 0 10px;
   align-items: center;

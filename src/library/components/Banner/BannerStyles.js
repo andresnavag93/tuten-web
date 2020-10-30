@@ -38,8 +38,8 @@ export const BackgroundColor = styled.div`
   height: 500px;
   width: 100vw;
   position: absolute;
-  opacity: 0.5;
-  background-color: ${Colors.red};
+  /* opacity: 0.5; */
+  background-color: ${Colors.blue};
 `;
 
 export const Title = styled.h1`
