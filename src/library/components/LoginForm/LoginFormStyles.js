@@ -54,6 +54,7 @@ export const InputButton = styled.input`
 `;
 
 export const Span = styled.span`
+  display: inline-block;
   /* margin: 1rem; */
   font-size: 2rem;
 `;
