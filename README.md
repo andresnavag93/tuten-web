@@ -4,7 +4,7 @@
 
 ### Url address
 
-- Link Url: [https://tuten-web.surge.sh/tuten-web/](https://tuten-web.surge.sh/tuten-web/)
+- Link Url: [https://tuten-web.surge.sh/](https://tuten-web.surge.sh/)
 
 ### Technologies / Tools
 
