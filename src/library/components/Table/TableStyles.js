@@ -5,5 +5,4 @@ export const Div = styled.div`
   margin-top: 10rem;
   text-align: center;
   max-width: 1024px;
-  background-color: red;
 `;

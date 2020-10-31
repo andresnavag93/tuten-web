@@ -41,7 +41,7 @@ export const Header = ({ children }) => {
       <HeaderTag>
         <Container>
           <Figure>
-            <Link to="/">
+            <Link to={token ? "/" : "/login"}>
               <Logo src={Images.logo} alt="Tuten Labs Logo" />
             </Link>
           </Figure>

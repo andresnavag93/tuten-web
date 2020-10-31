@@ -19,6 +19,7 @@ import Search from "@material-ui/icons/Search";
 import ViewColumn from "@material-ui/icons/ViewColumn";
 
 import MaterialTable from "material-table";
+import { TablePagination } from "@material-ui/core";
 
 import { Div } from "./TableStyles";
 import { get } from "../../../library/networking/http";
@@ -85,39 +86,42 @@ const Table = () => {
           {
             title: "BookingId",
             field: "bookingId",
-            sorting: false,
+            sorting: true,
             cellStyle: { textAlign: "center" },
           },
           {
-            title: "Nombre",
-            // field: "tutenUserClient.firstName",
-            field: "locationId.tutenUser.firstName",
+            title: "Cliente",
+            field: "locationId.tutenUser",
             sorting: false,
-            cellStyle: { textAlign: "center" },
-          },
-          {
-            title: "Apellido",
-            // field: "tutenUserClient.lastName",
-            field: "locationId.tutenUser.lastName",
-            sorting: false,
+            render: (rowData) =>
+              rowData.locationId.tutenUser.firstName +
+              " " +
+              rowData.locationId.tutenUser.lastName,
+
+            customFilterAndSearch: (term, rowData) =>
+              (
+                rowData.locationId.tutenUser.firstName.toLowerCase() +
+                " " +
+                rowData.locationId.tutenUser.lastName.toLowerCase()
+              ).includes(term.toLowerCase()),
             cellStyle: { textAlign: "center" },
           },
           {
             title: "Fecha de Creación",
             field: "bookingTime",
-            sorting: false,
+            sorting: true,
             cellStyle: { textAlign: "center" },
           },
           {
             title: "Dirección",
             field: "locationId.streetAddress",
-            sorting: false,
+            sorting: true,
             cellStyle: { textAlign: "center" },
           },
           {
             title: "Precio",
             field: "bookingPrice",
-            sorting: false,
+            sorting: true,
             cellStyle: { textAlign: "center" },
           },
         ]}
@@ -125,8 +129,30 @@ const Table = () => {
         options={{
           filtering: true,
           actionsColumnIndex: -1,
-          headerStyle: { textAlign: "center" },
+          headerStyle: { textAlign: "center", fontSize: 15 },
           searchFieldAlignment: "right",
+          searchFieldStyle: { fontSize: 15 },
+          rowStyle: { fontSize: 15 },
+        }}
+        components={{
+          Pagination: (props) => (
+            <TablePagination
+              {...props}
+              labelRowsPerPage={
+                <div style={{ fontSize: 15 }}>{props.labelRowsPerPage}</div>
+              }
+              labelDisplayedRows={(row) => (
+                <div style={{ fontSize: 15 }}>
+                  {props.labelDisplayedRows(row)}
+                </div>
+              )}
+              SelectProps={{
+                style: {
+                  fontSize: 15,
+                },
+              }}
+            />
+          ),
         }}
       />
     </Div>
